@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Google API</title>
+		<script src="js/angular.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=geometry,places"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+
+	<body onload="initializeAutocomplete()">
+		<content>
+		
+			<ul class="conteneur-onglets">
+				<li class="onglet" id="affiche-contenu-2" onclick="test(this.id)">Marker 1</li>
+				<li class="inactif onglet" id="affiche-contenu" onclick="nvonglet()" >+</li>
+			</ul>
+
+			<div class="contenu" id="contenu_1">
+			
+				<article id="formulaire" class='formulaire'>
+					<table>
+						<thead>
+							<tr>
+								<td colspan="4"><h1>Caractéristiques</h1></td>
+							</tr>
+						</thead>
+						<tr class="adresse">
+							<td colspan="4">
+								<h2>Addresse</h2>
+								<p>Adresse : </p><input id="address" type="text" placeholder="Indiquez l'adresse">
+							</td>
+						</tr>
+						<tr class="caracteristiques">
+							<td>
+							<h2>Map</h2>
+								<p>Width map (px) : </p><input type="text" ng-model="wmap" ng-init="wmap=900" placeholder="Largeur de la carte">
+								<br />
+								<p>Height map (px) : </p><input type="text" ng-model="hmap" ng-init="hmap=600" placeholder="Hauteur de la carte">
+								<br />
+								<p>Zoom map : </p><input type="text" id="zoom" placeholder="de 1 à 21" value="10">
+							</td>
+							<td>
+								<h2>Infobulle</h2>
+								<span>
+									<p>Titre infobulle : </p><input type="text" id="titre" placeholder="Titre de l'infobulle"><br />
+									<p id="texteinfo">Texte infobulle : </p><textarea id="texte" placeholder="Texte descriptif de l'infobulle"></textarea><br />
+									
+								</span>
+							</td>
+							<td>
+								<h2>Zone</h2>
+								<span>
+									<p>Rayon (Km) : </p><input type="number" id="rayonrayon" placeholder="Rayon autour du point"><br />
+									<p>Bordure : </p><input type="number" class="demi-input ancimg1" id="strokeopac" placeholder="Opacité" value="1"><input id="bordure" class="demi-input ancimg2" type="color" placeholder="#ffffff"><br />
+									<p>Fond : </p><input type="number" class="demi-input ancimg1" id="fillopac" placeholder="Opacité" value="0.1"><input id="fond" class="demi-input ancimg2" type="color" placeholder="#ffffff">
+								</span>
+							</td>
+							<td>
+								<h2>Marker</h2>
+								<span>
+									<p>url : </p><input type="url" id="image" value="marker/rouge.png" placeholder="url ou lien relatif" ><br />
+									<p>Width (px) : </p><input type="number" id="wimg" value="50" placeholder="taille de l'image"><br />
+									<p>Height (px) : </p><input type="number" id="himg" value="85" placeholder="hauteur de l'image">
+									<p>Ancre img (px) :</p><input type="text" id="ancimg1" class="demi-input ancimg1" value="26" placeholder="centre image"><input type="text" id="ancimg2" class="demi-input ancimg2" value="85" placeholder="bas image">
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4"><button onclick="initialize()">Générer la map</button></td>
+						</tr>
+					</table>
+				</article>
+			</div>
+		<h1>Map</h1>
+		<article id="map">
+			<div id="googleMap" style="width:{{wmap}}px;height:{{hmap}}px;">
+				
+			</div>
+		</article>
+		<article id="code">
+		<h1>Code</h1>
+
+		<td colspan="4"><button onclick="generateurCode()">Générer le code</button></td>
+		</article>
+		<pre>
+			<code>
+				
+			</code>
+		</pre>
+		</content>
+		<script type="text/javascript">
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,437 @@
+/*
+*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: 0;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+.div{
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+	display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ins {
+    text-decoration: none;
+    color: #000;
+    background-color: #ff9;
+}
+
+mark {
+    font-style: italic;
+    font-weight: bold;
+    color: #000;
+    background-color: #ff9;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    outline-color: #ccc;
+    outline-width: medium;
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url('../fonts/Avenir.ttc');
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+}
+
+h1 {
+    margin: 15px 0 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'avenir',Arial;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+}
+
+article#onglets {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+}
+
+.conteneur-onglets {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.onglet {
+    display: inline-block;
+    margin: 5px 2px 0 2px;
+    padding: 5px 10px 3px 10px;
+    border: 1px solid #AAA;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 5px 5px 0 0;
+
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.inactif {
+    background: #EEE;
+    border-bottom: 1px dashed black;
+    margin-bottom: -1px;
+}
+
+.inactif:hover {
+    background: #AAA;
+}
+
+li#affiche-contenu{
+	float: right;
+}
+
+.affiche-contenu {
+    padding-bottom: 3px;
+    background: white;
+    color: black;
+
+}
+
+.formulaire {
+	display: inline-block;
+}
+
+article.formulaire {
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    border-top: 1px solid #3B3B3B;
+    border-bottom: 1px solid #3B3B3B;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+article.formulaire h2 {
+    width: 100%;
+    margin: 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+button {
+    display: block;
+    width: 206px;
+    height: 30px;
+    margin: auto;
+    border: 1px solid #aaa;
+    outline: none;
+    background-color: white;
+    box-shadow: 2px 2px 2px #bbb;
+    cursor: pointer;
+}
+
+article.mapform{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+article.mapform table td h2{
+	font-size: 20px;
+	font-weight: normal;
+	margin: 10px 0;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #ccc;
+	letter-spacing: 1px;
+}
+
+article.mapform table{
+	width: 25%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+article.mapform table td input{
+	width: 50%;
+	float: right;
+	margin: 5px 0;
+}
+
+article.mapform table td p{
+	float: left;
+	clear: both;
+	line-height: 28px;
+}
+
+article.formulaire button:active {
+    background-color: #f8f8f8;
+}
+
+article.formulaire table {
+    width: 96%;
+    margin: auto;
+}
+
+article.formulaire table thead {
+    height: 30px;
+    padding: 5px 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+article.formulaire table td {
+    width: 25%;
+    margin: auto;
+    padding: 0 10px;
+}
+
+article.formulaire table p {
+    float: left;
+    width: 125px;
+    line-height: 36px;
+}
+
+article.formulaire tr.adresse input[type="text"] {
+    float: right;
+    width: 89%;
+    height: 20px;
+    margin: 6px 0;
+}
+
+article.formulaire tr.caracteristiques {
+    padding-top: 10px;
+}
+
+article.formulaire tr.caracteristiques input,
+textarea {
+    float: right;
+}
+
+article.formulaire input.demi-input {
+    display: inline-block;
+    width: 25.7% !important;
+}
+
+article.formulaire input.ancimg1 {
+    margin-left: 5px;
+}
+
+article.formulaire table tr.caracteristiques textarea#texte {
+    height: 60px;
+    max-height: 60px;
+    max-width: 55%;
+    border: 1px solid #ccc;
+}
+
+article.formulaire table tr.caracteristiques p#texteinfo {
+}
+
+article.formulaire table tr.caracteristiques input[type="text"],
+article.formulaire table input[type="number"],
+article.formulaire table input[type="url"],
+article.formulaire table textarea {
+    width: 55%;
+    height: 20px;
+    margin-bottom: 12px;
+}
+
+article.formulaire table input[type="color"] {
+    width: 55%;
+    height: 24px;
+    margin-bottom: 12px;
+}
+
+article#map {
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+article#map h1 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+article#map p {
+    padding: 5px 0 0 0;
+}
+
+article#map div#googleMap {
+    margin: auto;
+    border: 1px solid lightgrey;
+}
+
+article#map div#googleMap div.gm-style {
+    position: relative !important;
+}
